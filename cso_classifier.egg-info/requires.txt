@@ -1,0 +1,12 @@
+gensim>=4.3.3
+spacy>=3.7.4
+kneed>=0.8.5
+igraph>=0.11.4
+hurry.filesize>=0.9
+click>=8.1.8
+rapidfuzz>=3.9.6
+numpy>=1.26.4
+requests>=2.32.0
+strsimpy>=0.2.1
+update-checker>=0.18.0
+nltk>=3.9.1
