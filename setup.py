@@ -14,20 +14,19 @@ else:
 
 # --- Requirements ---
 requirements_to_install = [
-    "gensim>=4.3.3",
-    "spacy>=3.7.4",
+    "gensim>=4.3.3",             # modern Gensim API, compatible with Python 3.12
+    "spacy>=3.7.4",               # works with Pydantic v2
     "kneed>=0.8.5",
     "igraph>=0.11.4",
     "hurry.filesize>=0.9",
     "click>=8.1.8",
     "rapidfuzz>=3.9.6",
-    "numpy>=1.26.4",
+    "numpy>=1.26.4",               # 1.26.4 has wheels for 3.12
     "requests>=2.32.0",
     "strsimpy>=0.2.1",
     "update-checker>=0.18.0",
-    "nltk>=3.9.1",
+    "nltk>=3.9.1",                 # needed for stopwords
 ]
-
 """
 requirements_to_install = [
     'igraph==0.10.4;python_version>="3.7"',
