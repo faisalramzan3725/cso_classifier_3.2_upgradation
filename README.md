@@ -73,7 +73,7 @@ The CSO Classifier is a novel application that takes as input the text from the 
 
 ### Installation using PIP
 
-1. Ensure you have **Python 3.11.0**, or recent. Download them [from here](https://www.python.org/downloads/). Perhaps, you may want to use a virtual environment. Here is how to [create and activate](https://docs.python.org/3/tutorial/venv.html) a virtual environment.
+1. Ensure you have **Python 3.11.0**,**Python 3.12.0**, or recent. Download them [from here](https://www.python.org/downloads/). Perhaps, you may want to use a virtual environment. Here is how to [create and activate](https://docs.python.org/3/tutorial/venv.html) a virtual environment.
 2. Use pip to install the classifier: ```pip install cso-classifier```
 3. Setting up the classifier. Go to [Setup](#setup) for finalising the installation.
 
