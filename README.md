@@ -69,59 +69,6 @@ The CSO Classifier is a novel application that takes as input the text from the 
 ![Framework of CSO Classifier](https://github.com/angelosalatino/cso-classifier/raw/master/images/Workflow.png "Framework of CSO Classifier")
 **Figure 1**: Framework of CSO Classifier
 
-
-                      ┌────────────────────────────┐
-                      │        Your Paper          │
-                      │ title / abstract / keywords│
-                      └────────────┬───────────────┘
-                                   │
-                                   ▼
-                        ┌────────────────────────┐
-                        │   classifier.py        │
-                        │   CSOClassifier.run()  │
-                        └──────────┬────────────┘
-                                   │
-           ┌───────────────────────┼────────────────────────┐
-           │                                               │
-           ▼                                               ▼
- ┌────────────────────┐                           ┌────────────────────┐
- │ ontology.py         │                           │ model.py            │
- │ Loads CSO ontology  │                           │ Loads models:       │
- │ hierarchy graph     │                           │ - token→topic JSON  │
- └────────────────────┘                           │ - Word2Vec (pickle) │
-                                                   └────────────────────┘
-                                                                 │
-                  ┌───────────────────────────────┬──────────────┘
-                  │                               │
-                  ▼                               ▼
-       ┌────────────────────┐           ┌────────────────────┐
-       │ syntacticmodule.py │           │ semanticmodule.py  │
-       │ - exact/fuzzy match│           │ - word embeddings  │
-       │ - string similarity│           │ - most_similar()   │
-       └────────────────────┘           └────────────────────┘
-                  │                               │
-                  └──────────────┬────────────────┘
-                                 ▼
-                      ┌─────────────────────────────┐
-                      │ postprocmodule.py            │
-                      │ - remove outliers             │
-                      │ - enhance to parent topics    │
-                      │ - filter_by branch             │
-                      └─────────────────────────────┘
-                                 ▼
-                      ┌─────────────────────────────┐
-                      │          result.py           │
-                      │ - merge & format output      │
-                      │ - store weights & explanation│
-                      └─────────────────────────────┘
-                                 ▼
-                      ┌─────────────────────────────┐
-                      │          OUTPUT              │
-                      │ dict: syntactic, semantic,   │
-                      │ union, enhanced, weights...  │
-                      └─────────────────────────────┘
-
-
 ## Getting started
 
 ### Installation using PIP
