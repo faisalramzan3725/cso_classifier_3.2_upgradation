@@ -16,7 +16,7 @@ else:
 requirements_to_install = [
     "gensim>=4.3.3",             # modern Gensim API, compatible with Python 3.12
     "spacy>=3.7.4",               # works with Pydantic v2
-    "kneed>=0.8.5",
+    'kneed==0.3.1',
     "igraph>=0.11.4",
     "hurry.filesize>=0.9",
     "click>=8.1.8",
